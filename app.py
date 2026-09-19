@@ -2,10 +2,11 @@ from flask import Flask,render_template,url_for,redirect,request,session,flash
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 from functools import wraps
+import os
 
 app = Flask(__name__)
 
-app.config["SECRET_KEY"] = "secret"
+app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY")
 
 
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///taskflow.db"
