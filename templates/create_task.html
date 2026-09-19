@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Create_Task{% endblock %}
+
+
+{% block content %}
+
+<h1>Create a Task</h1>
+{% if error %}
+ <p>{{error}}</p>
+{% endif %}
+<form method="post">
+    <label>Task Title</label>
+    <input type="text" name="title"><br><br>
+    <label>Description</label>
+    <textarea name = "description"></textarea><br><br>
+    <button type="submit">Create Task</button>
+</form>
+
+{% endblock %}

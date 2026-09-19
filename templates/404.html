@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Page Not Found{% endblock %}
+
+{% block content %}
+
+<div class="error-page">
+    <h1>404</h1>
+    <h2>Page Not Found</h2>
+    <p>The page or task you're looking for doesn't exist.</p>
+
+    <a class="edit-btn" href="{{ url_for('home') }}">
+        Back to Home
+    </a>
+</div>
+
+{% endblock %}

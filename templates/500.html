@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Server Error{% endblock %}
+
+{% block content %}
+
+<div class="error-page">
+    <h1>500</h1>
+    <h2>Something went wrong</h2>
+    <p>We're sorry, but something went wrong on our side.</p>
+
+    <a class="edit-btn" href="{{ url_for('home') }}">
+        Back to Home
+    </a>
+</div>
+
+{% endblock %}
